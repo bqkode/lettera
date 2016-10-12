@@ -1,0 +1,28 @@
+{
+  "name": "lettera",
+  "version": "0.0.2",
+  "description": "Lettera gives you a typewriter effect for innerHTMLs",
+  "main": "lettera.min.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha --reporter spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bquentink/lettera.git"
+  },
+  "keywords": [
+    "lettera",
+    "typewriter",
+    "letter",
+    "text effect",
+    "text manipulation"
+  ],
+  "tonicExample": "",
+  "author": "Bjørn Quentin Kvamme",
+  "license": "CC Share Alike",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^2.0.0"
+  }
+}
