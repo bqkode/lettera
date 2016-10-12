@@ -2,7 +2,10 @@
 
 Lettera gives you a typewriter effect for innerHTMLs
 
+[Demo pen](http://codepen.io/bquentin/pen/YGvPBz)
+
 ![Lettera](https://raw.githubusercontent.com/bquentink/lettera/master/lettera.gif)
+
 
 
 ####Setup
@@ -54,4 +57,5 @@ var options = {
     errorChance : (number)    // optional, default : 0(%)
 }
 ```
+
 
