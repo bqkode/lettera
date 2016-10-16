@@ -1,7 +1,7 @@
 {
   "name": "lettera",
-  "version": "0.0.2",
-  "description": "Lettera gives you a typewriter effect for innerHTMLs",
+  "version": "0.0.3",
+  "description": "lettera is a typewriter effect package",
   "main": "lettera.min.js",
   "scripts": {
     "test": "./node_modules/.bin/mocha --reporter spec"

@@ -7,6 +7,7 @@
             maxDelay: 40,
             minHeight: true,
             errorChance: -1,
+            type: 'innerHTML',
         },
         element: null,
         elementHeight: null,
@@ -18,6 +19,7 @@
             if (!obj.element || !obj.string)
                 return false;
 
+            lettera.settings.type        = obj.type         || lettera.settings.type;
             lettera.settings.minDelay    = obj.minDelay     || lettera.settings.minDelay;
             lettera.settings.maxDelay    = obj.maxDelay     || lettera.settings.maxDelay;
             lettera.settings.minHeight   = obj.minHeight    || lettera.settings.minHeight;
@@ -25,7 +27,7 @@
 
             lettera.sentence        = [];
             lettera.element         = obj.element;
-            lettera.elementHeight   = lettera.element.style.minHeight;
+            lettera.elementHeight   = (lettera.element.offsetHeight || lettera.element.clientHeight) + 'px'; //lettera.element.style.minHeight;
 
             var words = obj.string.split(' ');
 
@@ -60,7 +62,7 @@
             if (lettera.settings.minHeight)
                 lettera.element.style.minHeight = (lettera.element.offsetHeight || lettera.element.clientHeight)+'px';
 
-            lettera.element.innerHTML = '';
+            lettera.element[lettera.settings.type] = '';
         },
 
         stop: function() {
@@ -91,18 +93,18 @@
 
             var failed = function() {
                 setTimeout(function() {
-                    lettera.element.innerHTML += lettera.getRandomCharacter(character);
+                    lettera.element[lettera.settings.type] += lettera.getRandomCharacter(character);
                 }, delay);
 
                 setTimeout(function() {
-                    lettera.element.innerHTML = lettera.element.innerHTML.slice(0, -1);
+                    lettera.element[lettera.settings.type] = lettera.element[lettera.settings.type].slice(0, -1);
                     correct();
                 }, delay*5);
             }
 
             var correct = function() {
                 setTimeout(function() {
-                    lettera.element.innerHTML += character;
+                    lettera.element[lettera.settings.type] += character;
                     cb();
                 }, delay);
             }

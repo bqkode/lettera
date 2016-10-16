@@ -1,10 +1,11 @@
 #lettera
 
-Lettera gives you a typewriter effect for innerHTMLs
+lettera is a typewriter effect package
+
+![Lettera](https://raw.githubusercontent.com/bquentink/lettera/master/lettera.gif)
 
 [Demo pen](http://codepen.io/bquentin/pen/YGvPBz)
 
-![Lettera](https://raw.githubusercontent.com/bquentink/lettera/master/lettera.gif)
 
 
 
@@ -30,7 +31,6 @@ or
 
 ####Use
 
-
 ```javascript
 // Set up the lettera effect
 var typewriterEffect = lettera.init(options);
@@ -49,6 +49,7 @@ typewriterEffect.clear();
 var options = {
     element     : (element),  // required
     string      : (string),   // required
+    type        : (string),   // optional, default : 'innerHTML' ('innerHTML' or 'value')
     autostart   : (bool),     // optional, default : false
     autoclear   : (bool),     // optional, default : false
     minHeight   : (bool),     // optional, default : true
